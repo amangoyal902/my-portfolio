@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-ink text-slate-300 font-sans antialiased overflow-x-hidden; }
+::selection { background: #9333EA; color: #fff; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #09090B; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#7C3AED, #C026D3); border-radius: 8px; }
+
+@layer components {
+  .glass { @apply bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl; }
+  .glow-hover { @apply transition duration-300 hover:-translate-y-1 hover:border-violet-500/50 hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.45)]; }
+  .grad-text { @apply bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400; }
+  .btn-primary { @apply btn bg-gradient-to-r from-violet2 to-fuchsia2 text-white shadow-lg shadow-fuchsia-600/30 hover:shadow-fuchsia-500/50; }
+  .btn-ghost { @apply btn glass text-white hover:bg-white/10; }
+  .section { @apply mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28; }
+}
+/* Animated background grid + mouse glow */
+.bg-grid { background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); animation: grid 20s linear infinite; }
+@keyframes grid { to { background-position: 48px 48px; } }
+.mouse-glow { background: radial-gradient(500px circle at var(--mx,50%) var(--my,30%), rgba(168,85,247,.12), transparent 60%); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
