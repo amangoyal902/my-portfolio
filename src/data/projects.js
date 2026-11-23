@@ -13,4 +13,4 @@ export const projects = [
     desc: 'Task manager that persists your todos in the browser with LocalStorage.', github: 'https://github.com/amangoyal902/clock_project', demo: '#' },
 ]
 // TODO: replace these links (put resume.pdf in /public)
-export const links = { github: 'https://github.com/amangoyal902', linkedin: 'https://www.linkedin.com/in/aman-goyal2003', email: 'mailto:your@email.com', resume: '/resume.pdf' }
+export const links = { github: 'https://github.com/amangoyal902', linkedin: 'https://www.linkedin.com/in/aman-goyal2003', email: 'amanskgoyal@gmail.com', resume: 'aman_resume.pdf' }
